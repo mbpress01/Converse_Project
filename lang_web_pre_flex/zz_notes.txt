@@ -1,0 +1,19 @@
+Conflicting Declarations - Ordering
+
+Highest to Lowest
+
+  Declarations
+    Inline Style
+      ID Selector (#)
+        Class Selector (.) or Pseudo-Class (:)
+          Element Selector (p, div, li, etc)
+            Universal selector (*)
+
+  You can override the above hierarchy with using
+  !important;
+
+  Inheritance
+    Not all properties get inherited.  Its mostely ones related to text: font-family, font-size,
+    font-weight, font-style, line-height, letter-spacing, text-align, text-transform,
+    text-shawdow, list-style, etc.
+    

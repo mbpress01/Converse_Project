@@ -1,0 +1,57 @@
+<text>
+  Time address horizontal elements
+  We also addressed a div container vs adding margins to class.  
+  Usually use div for positions, span generally for text 
+  Padding-bottom: 15px; the inline elements do not respect margin, padding
+  When thinking about containers think about space how much you want above and below
+  When elements overlap the margin bottom applies if bigge (you do not add together - marging is a way of saying space around me but if it bigger overlap the bigger wins
+  Top and bottom do not apply to inline elements
+</text>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<article class="product">
+		<h2 class="product-title">Converse Chuck Taylor All Star Low Top</h2>
+				
+		<img src="https://i.ibb.co/Jr7Wh1d/challenges.jpg" alt="Chuck Taylor All Star Shoe" height="250" width="250" />
+
+		<p class="price"><strong>$65.00</strong></p>
+		<p class="shipping">Free shipping</p>
+		<p class="classic-class"> Ready to dress up or down, these classic canvas Chucks are an everyday wardrobe staple.</p>
+
+    <!-- this is an inline element -->
+		<a class="more-info" href="https://www.converse.com">More information &rarr;</a>
+    <br>
+
+    <!-- usually use div for positions, span generally for text -->
+		<!-- you are giving to the div class NOT ONLY the box class BUT ALSO the bg-black -->
+    <!-- <div class="box-container"> -->
+    <div class="box bg-black" ></div> 
+    <div class="box bg-blue"></div>
+    <div class="box bg-red"></div>
+    <div class="box bg-orange"></div>
+    <div class="box bg-green"></div>
+    <div class="box bg-brown"></div>
+    <!-- </div> -->
+		 
+		<h3 class="details-title">Product details</h3>
+		<ul class="details-list">
+			<li>Lightweight, durable canvas sneaker</li>
+			<li>Lightly padded footbed for added comfort</li>
+			<li>Iconic Chuck Taylor ankle patch</li>
+		</ul>
+
+		<button class="add-cart">Add to cart</button>
+		</div>
+	</article>
+  
+</body>
+</html>

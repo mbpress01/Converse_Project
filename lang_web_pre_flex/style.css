@@ -1,0 +1,326 @@
+* {
+  /* border-top: 10px solid #1098ad; */
+  margin: 0;
+  padding: 0;
+}
+
+/* PAGE SECTIONS */
+body {
+  color: #444;
+  font-family: serif;
+
+  border-top: 10px solid #1098ad;
+  position: relative;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  /*position: relative;*/
+}
+
+.main-header {
+  /* padding: 20px; */
+  padding-left: 40px;
+  padding-right: 40px;
+  /* padding: 20px 40px; */
+  margin-bottom: 60px;
+  /* float: left; */
+  /* height: 80px; */
+}
+/* FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+nav a:link {
+  /* background-color: orangered; */
+  margin-right: 30px; /*- this is an inline element - this won't work */
+
+  display: inline-block; /*you use this to change inline to block*/
+  /* padding: 20px; - this is an inline element - this won't work */
+
+  /* margin-right: 30px; */
+
+  /* display: inline-block; this is an inline element and it allows */
+  /* you to have a margin right with zero in last child */
+}
+
+nav a:link:last-child {
+  margin-right: 0px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+/* post header {} */
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  /* padding: 0px 0; */
+  /* width: 500px; */
+}
+
+/* we have commented it out because we moved them up to the body selector this is a list selector h2, h3, h4, p, i {font-family: serif; color: #444;} */
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+  /* float: right; you float the h1*/
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  /* display: inline; */
+}
+/*pseudo class selector what you are doing is assigning the first child of the parent element they key with pseudo classes is to use in a list*/
+li:last-child {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+/* this is decendent selector; it should be used all the time*/
+/* footer p {
+  font-size: 16px;
+} */
+
+#author {
+  /* # represents an id selector */
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 12px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* ul {
+  list-style: none;
+} */
+
+.related {
+  list-style: none;
+}
+
+/* body {
+  /* background-color: orangered; 
+}*/
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/*li:nth-child(even) {
+  /* color: red; 
+}*/
+
+/* Misconception: this won't work! */
+article p:first-child {
+  color: red;
+}
+
+/* Styling links */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color: #777; */
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+/* LVHA */
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  /* top: 50px;
+  left: 50px; */
+  bottom: 50px;
+  right: 50px;
+}
+
+/* this is a pseudo element selector - it is used to style the first letter of the first line of a paragraph */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/*this is the adjacent sibling selector - it is used to style the first line of a paragraph that is immediately after an h3 element
+h3 + p::first-line {
+  /* color: red; 
+}*/
+
+h2 {
+  /* background-color: orange; */
+  position: relative;
+}
+
+h2::before {
+  /*when you use the absolute position, the before and after are the same since its positioned relative to the parent element */
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute; /*the before and after are the same since its positioned relative to the parent element */
+  top: -10px;
+  right: -25px;
+}
+
+/* Resolving conflicts */
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green !important;
+} */
+
+/* nav a:link,
+nav p {
+  font-size: 18px;
+} */
+
+/* this is an id to bold first bullet
+#firstbullet {
+  font-weight: bold;
+} */
+
+/* this is the nth-child selector - it is a pseudo class selector
+li:nth-child(2)
+color: red;
+*/
+
+/* this selected the odd or nth element in a list 
+li:nth-child(odd) {
+color: red; 
+} */
+
+/* you would think the first p in the article would be red, but it is not
+the first child is not a p but the first element in the article 
+the pseudo selector only work if paragraph is first element 
+article p:first-child {
+  color: red;
+}
+
+/*---------------------------------------------------*/
+/*THESE ARE PSEUDO CLASSES
+two rules are usually together 
+We will by styling hyper links 
+don't style the anchor class - use pseudo class to style 
+attribute element  */
+/* ----------------LVHA ----------------------*/

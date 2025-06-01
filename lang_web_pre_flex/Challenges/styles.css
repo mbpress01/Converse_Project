@@ -1,0 +1,150 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* this sets the all the text in the whole page - the html starts with the body */
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+/* PRODUCT - this is related to the article <article class="product"> which wraps all the elements in the html */
+/* if you look below you will see that the border for the page as well as the formatting of the border - it does not do anything else */
+.product {
+  border: 4px solid black;
+  width: 825px;
+  margin: 50px auto;
+}
+
+/* this only effects the first h2 element */
+.product-title {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+  padding: 15px;
+}
+
+/* this puts the sale text BEFORE THE h2 element - the page shows SALE next to the h2 text*/
+h2::before {
+  position: relative; /*need to figure out why the position relative works while absolute does not */
+  content: "Sale";
+  /* text-align: center; does not need to be done */
+  background-color: red;
+  color: white;
+  font-size: 13px;
+  padding: 5px 10px;
+  font-weight: bold;
+  top: -35px;
+  left: -150px;
+  letter-spacing: 2px;
+}
+
+/* PRODUCT INFORMATION */
+.price {
+  font-size: 24px;
+  padding-top: 5px;
+}
+
+.shipping {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.classic-class {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.more-info:link,
+.more-info:visited {
+  color: black;
+  /* padding-bottom: 15px; the inline elements do not respect margin, padding */
+}
+
+.more-info:hover,
+.more-info:active {
+  text-decoration: none;
+}
+/* take box container and think about space how much you want above and below */
+.box-container {
+  margin-top: 20px;
+  margin-bottom: 20px; /* this won't affect because it overlaps with the h3 class and since the product details is 10px the margin bottom applies (not add together - marging is a way of saying space around me but if it bigger the bigger wins */
+}
+.box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  /* the box does not share the color but shares the diplay width and height */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  /* background-color:black; */
+  /* border: 2px solid #333; */
+  /*border-radius: 10px;*/
+}
+
+/* these are called utility classes (one or two changes in them - they address one thing (this is on the same element */
+.bg-black {
+  background-color: black;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-brown {
+  background-color: brown;
+}
+
+/* PRODUCT DETAILS */
+.details-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.details-list {
+  list-style: square;
+  margin-left: 20px;
+}
+
+.details-list li {
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.add-cart {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border-top: 4px solid black;
+}
+
+.add-cart:hover {
+  color: #000;
+  background-color: #fff;
+}
